@@ -74,11 +74,24 @@ void addpos() {
 		printf("\nEnter the position :- ");
 		int pos = 0;
 		scanf(" %d",&pos);
+		if(pos == 1){
+			addfirst();
+			return;
+		}
 		node *ptr = head;
 		pos --;
-		while(pos > 1) {
+		while((pos > 1) && (ptr->next != NULL)) {
 			ptr->next;
 			pos--;
+		}
+		if(pos > 2) {
+			printf("\nPosition number is out of bound.\nEntering as a last element.");
+			addlast();
+			return;
+		}
+		else if(pos > 1) {
+			addlast();
+			return;
 		}
 		node *ptr1 = ptr->next;
 		node *tmp = (node *)malloc(sizeof(node));
