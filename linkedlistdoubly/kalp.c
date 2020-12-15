@@ -48,3 +48,46 @@ void addfirst() {
 		head = tmp;
 	}
 }
+
+void addlast() {
+	if(isempty())
+		create();
+	else {
+		node *tmp = (node *)malloc(sizeof(node));
+		printf("\nEnter the element :- ");
+		scanf(" %d",&tmp->data);
+		node *ptr = head;
+		tail->next = tmp;
+		tmp->next = NULL;
+		tmp->prev = tail;
+		tail = tmp;
+	}
+}
+
+void addpos() {
+	if(isempty()) {
+		printf("\nLinked list is empty. Proceeding you to enter the first element.");
+		create();
+		return;
+	}
+	else {
+		printf("\nEnter the position :- ");
+		int pos = 0;
+		scanf(" %d",&pos);
+		node *ptr = head;
+		pos --;
+		while(pos > 1) {
+			ptr->next;
+			pos--;
+		}
+		node *ptr1 = ptr->next;
+		node *tmp = (node *)malloc(sizeof(node));
+		printf("\nEnter the element :- ");
+		scanf(" %d",&tmp->data);
+		tmp->prev = ptr;
+		tmp->next = ptr1;
+		ptr->next = tmp;
+		ptr1->prev = tmp;
+	}
+
+}
