@@ -1,0 +1,15 @@
+13:38:54 **** Incremental Build of configuration Debug for project queue-basic ****
+make all 
+Building file: ../kalp.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"kalp.d" -MT"kalp.o" -o "kalp.o" "../kalp.c"
+Finished building: ../kalp.c
+ 
+Building target: queue-basic
+Invoking: GCC C Linker
+gcc  -o "queue-basic" ./kalp.o   
+Finished building target: queue-basic
+ 
+13:39:04 **** Incremental Build of configuration Debug for project queue-basic ****
+make all 
+make: Nothing to be done for 'all'.

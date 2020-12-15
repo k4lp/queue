@@ -1,0 +1,7 @@
+13:15:55 **** Incremental Build of configuration Default for project circular-queue ****
+make all 
+make: *** No rule to make target 'all'.  Stop.
+"make all" terminated with exit code 2. Build might be incomplete.
+
+13:15:56 Build Failed. 1 errors, 0 warnings. (took 477ms)
+

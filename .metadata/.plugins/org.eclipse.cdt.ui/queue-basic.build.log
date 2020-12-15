@@ -1,0 +1,6 @@
+13:39:04 **** Incremental Build of configuration Debug for project queue-basic ****
+make all 
+make: Nothing to be done for 'all'.
+
+13:39:04 Build Finished. 0 errors, 0 warnings. (took 469ms)
+
