@@ -31,3 +31,36 @@ int dequeue() {
 	else
 		return pu->q[pu->front = (pu->front +1)% pu->size];
 }
+
+void enqueue(int x) {
+	if(isfull())
+		return ;
+	else {
+		pu->q[pu->rear = (pu->rear +1) % pu->size] = x;
+	}
+}
+
+void display() {
+	if(isempty()) {
+		printf("\nQueue is empty.");
+		return;
+	}
+	else {
+		int i =0;
+		for( i = pu->front +1 ; i != (pu->rear + 1)%pu->size ; i = ( i + 1) % pu->size)
+			printf("\n %d",pu->q[i]);
+	}
+}
+
+int main() {
+	initialize();
+	enqueue(3);
+	display();
+	enqueue(3344);
+	display();
+	dequeue();
+	display();
+	dequeue();
+	display();
+	return 0;
+}
