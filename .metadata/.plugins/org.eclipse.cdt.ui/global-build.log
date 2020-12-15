@@ -1,4 +1,4 @@
-16:56:10 **** Incremental Build of configuration Debug for project queue-circular ****
+17:22:13 **** Incremental Build of configuration Debug for project queue-circular ****
 make all 
 Building file: ../kalp.c
 Invoking: GCC C Compiler
@@ -10,6 +10,6 @@ Invoking: GCC C Linker
 gcc  -o "queue-circular" ./kalp.o   
 Finished building target: queue-circular
  
-16:56:12 **** Incremental Build of configuration Debug for project queue-circular ****
+17:22:15 **** Incremental Build of configuration Debug for project queue-circular ****
 make all 
 make: Nothing to be done for 'all'.
