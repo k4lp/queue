@@ -15,6 +15,7 @@ void create() {
 		scanf(" %d",&tmp->data);
 		tmp->prev = NULL;
 		tmp->next = NULL;
+		head = tmp;
 		tail = head;
 	}
 	else {
