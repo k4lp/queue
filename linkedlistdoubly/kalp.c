@@ -102,5 +102,28 @@ void addpos() {
 		ptr->next = tmp;
 		ptr1->prev = tmp;
 	}
+}
 
+void delfirst() {
+	if(isempty()) {
+		printf("\nList is empty.");
+		return;
+	}
+	else {
+		head = head ->next;
+		free(head->prev);
+		head->prev = NULL;
+	}
+}
+
+void dellast() {
+	if(isempty()) {
+		printf("\nList is empty.");
+		return;
+	}
+	else {
+		tail = tail->prev;
+		free(tail->next);
+		tail->next = NULL;
+	}
 }
