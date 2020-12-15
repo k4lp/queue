@@ -14,4 +14,20 @@ void initialize() {
 	printf("\nEnter the size of the queue :- ");
 	scanf(" %d", &pu->size);
 	pu->q = (int *)malloc(sizeof(int) * pu->size);
+	pu->front = pu->rear = 0;
+}
+
+int isempty() {
+	return pu->front == pu->rear;
+}
+
+int isfull() {
+	return ( (pu->rear +1 ) % pu->size == pu->front);
+}
+
+int dequeue() {
+	if(isempty())
+		return '$';
+	else
+		return pu->q[pu->front = (pu->front +1)% pu->size];
 }
