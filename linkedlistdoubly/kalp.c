@@ -126,9 +126,13 @@ void dellast() {
 		return;
 	}
 	else {
-		tail = tail->prev;
-		free(tail->next);
-		tail->next = NULL;
+		node *ptr = head;
+		while(ptr->next!=NULL) {
+			ptr=ptr->next;
+		}
+		ptr=ptr->prev;
+		free(ptr->next);
+		tail = ptr;
 	}
 }
 
@@ -150,12 +154,8 @@ void delpos() {
 			pos--;
 			ptr=ptr->next;
 		}
-		if( pos > 1){
+		if( pos >= 1){
 			printf("\nPosition out of bound. Deleting last element.");
-			dellast();
-			return;
-		}
-		else if(ptr->next == NULL) {
 			dellast();
 			return;
 		}

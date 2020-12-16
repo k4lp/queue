@@ -1,4 +1,4 @@
-00:48:04 **** Incremental Build of configuration Debug for project linkedlistdoubly ****
+16:21:19 **** Incremental Build of configuration Debug for project linkedlistdoubly ****
 make all 
 Building file: ../kalp.c
 Invoking: GCC C Compiler
@@ -10,6 +10,6 @@ Invoking: GCC C Linker
 gcc  -o "linkedlistdoubly" ./kalp.o   
 Finished building target: linkedlistdoubly
  
-00:48:07 **** Incremental Build of configuration Debug for project linkedlistdoubly ****
+16:21:20 **** Incremental Build of configuration Debug for project linkedlistdoubly ****
 make all 
 make: Nothing to be done for 'all'.
