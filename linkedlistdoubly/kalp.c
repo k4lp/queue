@@ -120,52 +120,6 @@ void delfirst() {
 	}
 }
 
-void dellast() {
-	if(isempty()) {
-		printf("\nList is empty.");
-		return;
-	}
-	else {
-		node *ptr = head;
-		while(ptr->next!=NULL) {
-			ptr=ptr->next;
-		}
-		ptr=ptr->prev;
-		free(ptr->next);
-		tail = ptr;
-	}
-}
-
-void delpos() {
-	if(isempty()) {
-		printf("\nList is empty.");
-		return;
-	}
-	else {
-		printf("\nEnter the position :- ");
-		int pos = 0;
-		scanf(" %d",&pos);
-		if(pos == 1) {
-			delfirst();
-			return;
-		}
-		node *ptr = head;
-		while((pos > 1) && (ptr->next != NULL)) {
-			pos--;
-			ptr=ptr->next;
-		}
-		if( pos >= 1){
-			printf("\nPosition out of bound. Deleting last element.");
-			dellast();
-			return;
-		}
-		node *ptr1 = ptr->prev,*ptr2 = ptr->next;
-		free(ptr);
-		ptr1->next = ptr2;
-		ptr2->prev = ptr1;
-	}
-}
-
 void display() {
 	if(isempty()) {
 		printf("\nList is empty.");
