@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<ctype.h>
 
 #define SIZE 100
 
@@ -47,4 +48,59 @@ char peek() {
 	else {
 		return pu->data[pu->top];
 	}
+}
+
+int out(char x) {
+	if( x == '+' || x == '-')
+		return 1;
+	else if(x == '*' || x == '/')
+		return 3;
+	else if(x == '(')
+		return 7;
+	else if(x == ')')
+		return 0;
+	else return 9;
+}
+
+int in(char x) {
+	if(x == '+' || x == '-')
+		return 2;
+	else if( x == '*' || x == '/')
+		return 4;
+	else if(x == '(')
+		return 0;
+	else return 9;
+}
+
+void intopost(char *post,const char *exp) {
+	int i = 0 , j = 0 ;
+	initialize();
+	for( ; exp[i]!='\0';i++) {
+		if(isalpha(exp[i]))
+			post[j++] = exp[i];
+		else if(isempty())
+			push(exp[i]);
+		else if(out(exp[i]) > in(peek()))
+			push(exp[i]);
+		else {
+			while(!isempty() && (out(exp[i]) != in(peek()))) {
+				post[j++] = pop();
+			}
+			if( exp[i] !=')')
+				push(exp[i]);
+			else
+				pop();
+		}
+	}
+	do {
+		post[j++] = pop();
+	} while(!isempty());
+}
+
+
+int main() {
+	char exp[] = "((a+b)/c)+d-(g-h)";
+	char post1[100];
+	intopost(post1,exp);
+	printf("\n%s",post1);
 }
