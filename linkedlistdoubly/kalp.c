@@ -149,8 +149,27 @@ void delpos() {
 		printf("\nEnter the position :- ");
 		int pos = 0;
 		scanf(" %d",&pos);
+		if(pos == 1){
+			delfirst();
+			return;
+		}
 		node *ptr = head;
-		while(pos > 0 && ())
+		while(pos > 1 && ( ptr->next != NULL)) {
+			ptr= ptr->next;
+			pos --;
+		}
+		if(pos >= 1){
+			if(pos >= 2) {
+				printf("\nIndex out of bound. Deleting last element.");
+				dellast();
+				return;
+			}
+			dellast();
+			return;
+		}
+		node *ptr1=ptr->prev,*ptr2=ptr->next;
+		ptr1->next = ptr2;
+		ptr2->prev = ptr1;
 	}
 }
 
