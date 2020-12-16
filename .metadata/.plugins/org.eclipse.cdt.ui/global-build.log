@@ -1,18 +1,12 @@
-00:52:27 **** Build of configuration Debug for project dummystackpost ****
-make all 
-Building file: ../kalp.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"kalp.d" -MT"kalp.o" -o "kalp.o" "../kalp.c"
-Finished building: ../kalp.c
- 
-Building target: dummystackpost
-Invoking: GCC C Linker
-gcc  -o "dummystackpost" ./kalp.o   
-Finished building target: dummystackpost
- 
-00:52:34 **** Incremental Build of configuration Debug for project dummystackpost ****
+01:15:20 **** Incremental Build of configuration Debug for project stack-posteval ****
 make all 
 make: Nothing to be done for 'all'.
-00:52:45 **** Incremental Build of configuration Debug for project stack-intopost ****
+01:15:29 **** Incremental Build of configuration Debug for project stack-posteval ****
+make all 
+make: Nothing to be done for 'all'.
+01:15:55 **** Incremental Build of configuration Debug for project stack-posteval ****
+make all 
+make: Nothing to be done for 'all'.
+01:16:00 **** Incremental Build of configuration Debug for project dummpstackeval ****
 make all 
 make: Nothing to be done for 'all'.
