@@ -154,13 +154,14 @@ void delpos() {
 			return;
 		}
 		node *ptr = head;
-		while(pos > 1 && ( ptr->next != NULL)) {
+		pos --;
+		while(pos > 0 && ( ptr->next != NULL)) {
 			ptr= ptr->next;
 			pos --;
 		}
-		if(pos >= 1){
-			if(pos >= 2) {
-				printf("\nIndex out of bound. Deleting last element.");
+		if(ptr->next == NULL){
+			if(pos >= 1) {
+				printf("\nPosition out of bound. Deleting last element.");
 				dellast();
 				return;
 			}
@@ -170,6 +171,7 @@ void delpos() {
 		node *ptr1=ptr->prev,*ptr2=ptr->next;
 		ptr1->next = ptr2;
 		ptr2->prev = ptr1;
+		free(ptr);
 	}
 }
 
@@ -201,7 +203,7 @@ int main() {
 		case 4: addpos();break;
 		case 5: delfirst();break;
 		case 6: dellast();break;
-		//case 7: delpos();break;
+		case 7: delpos();break;
 		case 8: display();break;
 		case 9:
 			printf("\nExiting....");
