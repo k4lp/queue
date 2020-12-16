@@ -120,6 +120,40 @@ void delfirst() {
 	}
 }
 
+void dellast() {
+	if(isempty()) {
+		printf("\nList is empty.");
+		return;
+	}
+	else {
+		if(head == tail) {
+			free(head);
+			head = tail = NULL;
+			return;
+		}
+		else {
+			tail = tail->prev;
+			free(tail->next);
+			tail->next = NULL;
+			return;
+		}
+	}
+}
+
+void delpos() {
+	if(isempty()) {
+		printf("\nList is empty.");
+		return;
+	}
+	else {
+		printf("\nEnter the position :- ");
+		int pos = 0;
+		scanf(" %d",&pos);
+		node *ptr = head;
+		while(pos > 0 && ())
+	}
+}
+
 void display() {
 	if(isempty()) {
 		printf("\nList is empty.");
@@ -148,7 +182,7 @@ int main() {
 		case 4: addpos();break;
 		case 5: delfirst();break;
 		case 6: dellast();break;
-		case 7: delpos();break;
+		//case 7: delpos();break;
 		case 8: display();break;
 		case 9:
 			printf("\nExiting....");
