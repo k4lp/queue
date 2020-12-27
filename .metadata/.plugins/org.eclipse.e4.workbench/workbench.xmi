@@ -169,15 +169,17 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_f7mtPT6mEeua34ACe0MggQ" elementId="org.eclipse.ui.editorss" selectedElement="_f7mtPj6mEeua34ACe0MggQ">
-      <children xsi:type="basic:PartStack" xmi:id="_f7mtPj6mEeua34ACe0MggQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_3F6AoED4Eeu37OWgACjJaA">
+      <children xsi:type="basic:PartStack" xmi:id="_f7mtPj6mEeua34ACe0MggQ" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_dptIsD6rEeup5qPlSd7vyA">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_dptIsD6rEeup5qPlSd7vyA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="kalp.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;kalp.c&quot; partName=&quot;kalp.c&quot; title=&quot;kalp.c&quot; tooltip=&quot;queue-basic/kalp.c&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/queue-basic/kalp.c&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;534&quot; selectionTopPixel=&quot;322&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;kalp.c&quot; partName=&quot;kalp.c&quot; title=&quot;kalp.c&quot; tooltip=&quot;queue-basic/kalp.c&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/queue-basic/kalp.c&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;534&quot; selectionTopPixel=&quot;323&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
+          <tags>active</tags>
+          <tags>activeOnClose</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_8_GhsECBEeu37OWgACjJaA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="kalp.cpp" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;kalp.cpp&quot; partName=&quot;kalp.cpp&quot; title=&quot;kalp.cpp&quot; tooltip=&quot;CPP-test/kalp.cpp&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/CPP-test/kalp.cpp&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;354&quot; selectionTopPixel=&quot;136&quot;/>&#xA;&lt;/editor>"/>
@@ -190,14 +192,6 @@
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_3F6AoED4Eeu37OWgACjJaA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="main.cpp" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;main.cpp&quot; partName=&quot;main.cpp&quot; title=&quot;main.cpp&quot; tooltip=&quot;307-kalp-83-2/main.cpp&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/307-kalp-83-2/main.cpp&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1331&quot; selectionTopPixel=&quot;966&quot;/>&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>removeOnHide</tags>
-          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
-          <tags>active</tags>
-          <tags>activeOnClose</tags>
         </children>
       </children>
     </sharedElements>
@@ -305,7 +299,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_f7mtfT6mEeua34ACe0MggQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_cT57oEAlEeu37OWgACjJaA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_f7sy2z6mEeua34ACe0MggQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_DGt4MEgtEeukeMHkMYGnQw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_f7sy2z6mEeua34ACe0MggQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_f7mtjj6mEeua34ACe0MggQ" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -336,7 +330,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_f7nTVj6mEeua34ACe0MggQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_cT8-8EAlEeu37OWgACjJaA" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_f7sOlT6mEeua34ACe0MggQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_DGywsEgtEeukeMHkMYGnQw" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_f7sOlT6mEeua34ACe0MggQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_f7nTYT6mEeua34ACe0MggQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
