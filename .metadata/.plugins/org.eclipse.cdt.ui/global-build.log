@@ -1,20 +1,4 @@
-15:58:54 **** Incremental Build of configuration Debug for project c-timepass ****
-make all 
-Building file: ../kalp.c
-Invoking: GCC C Compiler
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"kalp.d" -MT"kalp.o" -o "kalp.o" "../kalp.c"
-../kalp.c: In function ‘main’:
-../kalp.c:16:4: warning: value computed is not used [-Wunused-value]
-   16 |    *a++,*b++,*c++,*d++,*e++;
-      |    ^~~~
-Finished building: ../kalp.c
- 
-Building target: c-timepass
-Invoking: GCC C Linker
-gcc  -o "c-timepass" ./kalp.o   
-Finished building target: c-timepass
- 
-15:59:02 **** Incremental Build of configuration Debug for project CPP-test ****
+00:22:41 **** Incremental Build of configuration Debug for project CPP-test ****
 make all 
 Building file: ../kalp.cpp
 Invoking: GCC C++ Compiler
@@ -24,11 +8,8 @@ Finished building: ../kalp.cpp
 Building target: CPP-test
 Invoking: GCC C++ Linker
 g++  -o "CPP-test" ./kalp.o   
-/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
-(.text+0x24): undefined reference to `main'
-collect2: error: ld returned 1 exit status
-make: *** [makefile:46: CPP-test] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
-15:59:12 **** Incremental Build of configuration Debug for project c-timepass ****
+Finished building target: CPP-test
+ 
+00:22:43 **** Incremental Build of configuration Debug for project CPP-test ****
 make all 
 make: Nothing to be done for 'all'.
