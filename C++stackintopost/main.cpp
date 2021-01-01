@@ -62,53 +62,56 @@ private :
 			return 7;
 		else return 9;
 	}
+	int isoperand(char x) {
+		if(x == '+' || x == '-' || x == '*' || x == '/')
+			return 1;
+		else return 0;
+	}
 public :
 	post() {
-		if(data == NULL) {
-			data = new int[SIZE];
-			top = -1;
-		}
-		else {
-			delete[] data;
-			data = new int[SIZE];
-			top = -1;
-		}
+		delete[] data;
+		data = new int[SIZE];
+		top = -1;
 	}
 	~post() {
 		delete[] data;
 		cout<<"Stack memory is deleted"<<endl;
 	}
-	void intopost(char *exp, char post) {
-		int j = 0,i=0;
-		for(int x : exp) {
-			if(isalpha(exp[i])) {
-				post[j++];
-			}
-			else if(isempty())
-				push(exp[i]);
-			else if(out(exp[i]) > in(peek()))
-				push(exp[i]);
+	void posteval(const char *exp, int &answer) {
+		int result = 0, i=0,x1 =0,x2 =0;
+		for(;exp[i]!='\0';i++) {
+			if(!isoperand(exp[i]))
+				push(exp[i] - '0');
 			else {
-				while(!isempty() || out(exp[i]) != in(peek())) {
-					post[j++] = pop();
+				x1 = pop();
+				x2 = pop();
+				cout<<endl<<"x1 , x2 = "<<x1<< "--"<<x2<<endl;
+				switch(exp[i]) {
+				case '+' :
+					result = x2 + x1;
+					break;
+				case '-' :
+					result = x2-x1;
+					break;
+				case '*' :
+					result = x2 * x1;
+					break;
+				case '/' :
+					result = x2 / x1;
+					break;
 				}
-				if(exp[i] != ')')
-					push(exp[i]);
-				else
-					pop();
+				push(result);
 			}
 		}
-		do {
-			post[j++] = pop();
-		} while(!isempty());
+		answer = pop();
 	}
 };
 
 int main() {
 	post post1;
-	char * exp = "a+b-c*d/e";
-	char post[30];
-	post1.intopost(exp,post);
-	cout<<post<<endl;
+	char * exp = "35*62/+4-";
+	int result = 9;
+	post1.posteval(exp,result);
+	cout<<result<<endl;
 	return 0;
 }

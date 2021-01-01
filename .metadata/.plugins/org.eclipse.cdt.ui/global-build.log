@@ -1,60 +1,24 @@
-03:19:30 **** Incremental Build of configuration Debug for project C++stackintopost ****
+00:29:45 **** Incremental Build of configuration Debug for project C++stackintopost ****
 make all 
 Building file: ../main.cpp
 Invoking: GCC C++ Compiler
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
-../main.cpp: In member function ‘void post::intopost(char*, char)’:
-../main.cpp:83:15: error: ‘begin’ was not declared in this scope; did you mean ‘std::begin’?
-   83 |   for(int x : exp) {
-      |               ^~~
-      |               std::begin
-In file included from /usr/include/c++/10/string:54,
-                 from /usr/include/c++/10/bits/locale_classes.h:40,
-                 from /usr/include/c++/10/bits/ios_base.h:41,
-                 from /usr/include/c++/10/ios:42,
-                 from /usr/include/c++/10/ostream:38,
-                 from /usr/include/c++/10/iostream:39,
-                 from ../main.cpp:1:
-/usr/include/c++/10/bits/range_access.h:108:37: note: ‘std::begin’ declared here
-  108 |   template<typename _Tp> const _Tp* begin(const valarray<_Tp>&);
-      |                                     ^~~~~
-../main.cpp:83:15: error: ‘end’ was not declared in this scope; did you mean ‘std::end’?
-   83 |   for(int x : exp) {
-      |               ^~~
-      |               std::end
-In file included from /usr/include/c++/10/string:54,
-                 from /usr/include/c++/10/bits/locale_classes.h:40,
-                 from /usr/include/c++/10/bits/ios_base.h:41,
-                 from /usr/include/c++/10/ios:42,
-                 from /usr/include/c++/10/ostream:38,
-                 from /usr/include/c++/10/iostream:39,
-                 from ../main.cpp:1:
-/usr/include/c++/10/bits/range_access.h:110:37: note: ‘std::end’ declared here
-  110 |   template<typename _Tp> const _Tp* end(const valarray<_Tp>&);
-      |                                     ^~~
-../main.cpp:85:9: error: invalid types ‘char[int]’ for array subscript
-   85 |     post[j++];
-      |         ^
-../main.cpp:93:10: error: invalid types ‘char[int]’ for array subscript
-   93 |      post[j++] = pop();
-      |          ^
-../main.cpp:83:11: warning: unused variable ‘x’ [-Wunused-variable]
-   83 |   for(int x : exp) {
-      |           ^
-../main.cpp:102:8: error: invalid types ‘char[int]’ for array subscript
-  102 |    post[j++] = pop();
-      |        ^
 ../main.cpp: In function ‘int main()’:
-../main.cpp:109:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-  109 |  char * exp = "a+b-c*d/e";
+../main.cpp:114:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  114 |  char * exp = "35*62/+4-";
       |               ^~~~~~~~~~~
-../main.cpp:111:21: error: invalid conversion from ‘char*’ to ‘char’ [-fpermissive]
-  111 |  post1.intopost(exp,post);
-      |                     ^~~~
-      |                     |
-      |                     char*
-../main.cpp:81:32: note:   initializing argument 2 of ‘void post::intopost(char*, char)’
-   81 |  void intopost(char *exp, char post) {
-      |                           ~~~~~^~~~
-make: *** [subdir.mk:20: main.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
+../main.cpp: In constructor ‘post::post()’:
+../main.cpp:72:12: warning: ‘*<unknown>.post::data’ is used uninitialized in this function [-Wuninitialized]
+   72 |   delete[] data;
+      |            ^~~~
+../main.cpp:72:12: warning: ‘*<unknown>.post::data’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+Finished building: ../main.cpp
+ 
+Building target: C++stackintopost
+Invoking: GCC C++ Linker
+g++  -o "C++stackintopost" ./main.o   
+Finished building target: C++stackintopost
+ 
+00:29:47 **** Incremental Build of configuration Debug for project C++stackintopost ****
+make all 
+make: Nothing to be done for 'all'.
