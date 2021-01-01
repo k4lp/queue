@@ -1,24 +1,15 @@
-00:29:45 **** Incremental Build of configuration Debug for project C++stackintopost ****
+00:50:45 **** Build of configuration Debug for project C++Queue-circular ****
 make all 
 Building file: ../main.cpp
 Invoking: GCC C++ Compiler
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
-../main.cpp: In function ‘int main()’:
-../main.cpp:114:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
-  114 |  char * exp = "35*62/+4-";
-      |               ^~~~~~~~~~~
-../main.cpp: In constructor ‘post::post()’:
-../main.cpp:72:12: warning: ‘*<unknown>.post::data’ is used uninitialized in this function [-Wuninitialized]
-   72 |   delete[] data;
-      |            ^~~~
-../main.cpp:72:12: warning: ‘*<unknown>.post::data’ may be used uninitialized in this function [-Wmaybe-uninitialized]
 Finished building: ../main.cpp
  
-Building target: C++stackintopost
+Building target: C++Queue-circular
 Invoking: GCC C++ Linker
-g++  -o "C++stackintopost" ./main.o   
-Finished building target: C++stackintopost
+g++  -o "C++Queue-circular" ./main.o   
+Finished building target: C++Queue-circular
  
-00:29:47 **** Incremental Build of configuration Debug for project C++stackintopost ****
+00:50:56 **** Incremental Build of configuration Debug for project C++Queue-circular ****
 make all 
 make: Nothing to be done for 'all'.
