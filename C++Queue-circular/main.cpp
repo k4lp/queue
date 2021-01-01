@@ -31,9 +31,21 @@ private :
 			return q[front = ((front + 1)%size)];
 		}
 	}
+	void display() {
+		if(isempty()) {
+			cout<<"Queue is empty."<<endl;
+			return;
+		}
+		else {
+			int i = front +1;
+			for(;i!=((rear+1)%size) ; i = (i+1)%size)
+				cout<<q[i]<<endl;
+		}
+	}
 public :
 	Queue() {
 		cout<<"Enter the size of the queue :- "<<endl;
+		size = 0;
 		cin>>size;
 		q = new int[size];
 		front = 0;
@@ -50,7 +62,33 @@ public :
 			cout<<"2. Dequeue"<<endl;
 			cout<<"3. Is full?"<<endl;
 			cout<<"4. Is empty?"<<endl;
+			cout<<"5. Display Queue."<<endl;
 			cout<<"8. Exit"<<endl;
+			cout<<"Enter your choice :- "<<endl;
+			cin>>choice;
+			switch(choice) {
+			case 1 :
+				enqueue();
+				break;
+			case 2:
+				dequeue();
+				break;
+			case 3:
+				cout<<isfull()<<endl;
+				break;
+			case 4:
+				cout<<isempty()<<endl;
+				break;
+			case 5:
+				display();
+				break;
+			case 8:
+				break;
+			default :
+				cout<<"Enter valid choice."<<endl;
+				break;
+
+			}
 		}
 	}
 };
@@ -58,5 +96,6 @@ public :
 
 int main(){
 	Queue queue;
+	queue.run();
 	return 0;
 }
