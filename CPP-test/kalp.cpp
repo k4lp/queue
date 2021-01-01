@@ -3,6 +3,9 @@
 
 using namespace std;
 
+template<typename T>
+
+
 double mypow(int base,int exponent) {
 	int result = 1;
 	while(exponent >= 1) {
@@ -12,16 +15,21 @@ double mypow(int base,int exponent) {
 	return result;
 }
 
-int main() {
-	string firstname , lastname ;
-	cout<<"Enter the first name :- "<<endl;
-	getline(cin,firstname);
-	cout<<"Enter the last name :-"<<endl;
-	getline(cin,lastname);
-	string name = firstname + " " + lastname + ".";
-	cout<<"So your name is "<<name<<endl;
+void add(int x , int y, int z) {
+	cout<<x+y+z<<endl;
+}
 
-	cout<<"Your name length is :- " << name.length()<<endl;
+void add(int x, int y) {
+	cout<<x+y<<endl;
+}
+
+int main() {
+	int x , y;
+	cout<<"Enter X and Y :- "<<endl;
+	cin>>x>>y;
+	cout<<"X = " << x << " Y = "<<y<<endl;
+	add(4,5);
+	add(4,5,6);
 	return 0;
 }
 

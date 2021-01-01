@@ -1,15 +1,60 @@
-00:22:41 **** Incremental Build of configuration Debug for project CPP-test ****
+03:19:30 **** Incremental Build of configuration Debug for project C++stackintopost ****
 make all 
-Building file: ../kalp.cpp
+Building file: ../main.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"kalp.d" -MT"kalp.o" -o "kalp.o" "../kalp.cpp"
-Finished building: ../kalp.cpp
- 
-Building target: CPP-test
-Invoking: GCC C++ Linker
-g++  -o "CPP-test" ./kalp.o   
-Finished building target: CPP-test
- 
-00:22:43 **** Incremental Build of configuration Debug for project CPP-test ****
-make all 
-make: Nothing to be done for 'all'.
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+../main.cpp: In member function ‘void post::intopost(char*, char)’:
+../main.cpp:83:15: error: ‘begin’ was not declared in this scope; did you mean ‘std::begin’?
+   83 |   for(int x : exp) {
+      |               ^~~
+      |               std::begin
+In file included from /usr/include/c++/10/string:54,
+                 from /usr/include/c++/10/bits/locale_classes.h:40,
+                 from /usr/include/c++/10/bits/ios_base.h:41,
+                 from /usr/include/c++/10/ios:42,
+                 from /usr/include/c++/10/ostream:38,
+                 from /usr/include/c++/10/iostream:39,
+                 from ../main.cpp:1:
+/usr/include/c++/10/bits/range_access.h:108:37: note: ‘std::begin’ declared here
+  108 |   template<typename _Tp> const _Tp* begin(const valarray<_Tp>&);
+      |                                     ^~~~~
+../main.cpp:83:15: error: ‘end’ was not declared in this scope; did you mean ‘std::end’?
+   83 |   for(int x : exp) {
+      |               ^~~
+      |               std::end
+In file included from /usr/include/c++/10/string:54,
+                 from /usr/include/c++/10/bits/locale_classes.h:40,
+                 from /usr/include/c++/10/bits/ios_base.h:41,
+                 from /usr/include/c++/10/ios:42,
+                 from /usr/include/c++/10/ostream:38,
+                 from /usr/include/c++/10/iostream:39,
+                 from ../main.cpp:1:
+/usr/include/c++/10/bits/range_access.h:110:37: note: ‘std::end’ declared here
+  110 |   template<typename _Tp> const _Tp* end(const valarray<_Tp>&);
+      |                                     ^~~
+../main.cpp:85:9: error: invalid types ‘char[int]’ for array subscript
+   85 |     post[j++];
+      |         ^
+../main.cpp:93:10: error: invalid types ‘char[int]’ for array subscript
+   93 |      post[j++] = pop();
+      |          ^
+../main.cpp:83:11: warning: unused variable ‘x’ [-Wunused-variable]
+   83 |   for(int x : exp) {
+      |           ^
+../main.cpp:102:8: error: invalid types ‘char[int]’ for array subscript
+  102 |    post[j++] = pop();
+      |        ^
+../main.cpp: In function ‘int main()’:
+../main.cpp:109:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  109 |  char * exp = "a+b-c*d/e";
+      |               ^~~~~~~~~~~
+../main.cpp:111:21: error: invalid conversion from ‘char*’ to ‘char’ [-fpermissive]
+  111 |  post1.intopost(exp,post);
+      |                     ^~~~
+      |                     |
+      |                     char*
+../main.cpp:81:32: note:   initializing argument 2 of ‘void post::intopost(char*, char)’
+   81 |  void intopost(char *exp, char post) {
+      |                           ~~~~~^~~~
+make: *** [subdir.mk:20: main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
