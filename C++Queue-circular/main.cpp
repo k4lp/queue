@@ -53,7 +53,7 @@ public :
 	}
 	~Queue() {
 		delete[] q;
-		cout<<"Queue has been deleted."<<endl;
+		cout<<"Queue has been deleted and program has been exited."<<endl;
 	}
 	void run() {
 		int choice = 9;
