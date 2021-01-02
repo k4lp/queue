@@ -424,3 +424,6 @@ org.eclipse.jface.text.BadLocationException
 
 !ENTRY org.eclipse.cdt.core 1 0 2021-01-02 14:31:32.907
 !MESSAGE Indexed 'C++Strings' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-01-02 16:38:45.689
+!MESSAGE Indexed 'C++Linkedlist' (0 sources, 0 headers) in 0.001 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
