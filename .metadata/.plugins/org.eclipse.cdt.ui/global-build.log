@@ -1,4 +1,4 @@
-01:07:43 **** Incremental Build of configuration Debug for project C++Queue-circular ****
+14:01:49 **** Incremental Build of configuration Debug for project C++Queue-circular ****
 make all 
 Building file: ../main.cpp
 Invoking: GCC C++ Compiler
@@ -10,6 +10,6 @@ Invoking: GCC C++ Linker
 g++  -o "C++Queue-circular" ./main.o   
 Finished building target: C++Queue-circular
  
-01:07:44 **** Incremental Build of configuration Debug for project C++Queue-circular ****
+14:01:51 **** Incremental Build of configuration Debug for project C++Queue-circular ****
 make all 
 make: Nothing to be done for 'all'.

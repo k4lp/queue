@@ -47,7 +47,7 @@ public :
 		cout<<"Enter the size of the queue :- "<<endl;
 		size = 0;
 		cin>>size;
-		q = new int[size];
+		q = new int[size + 1];
 		front = 0;
 		rear = 0;
 	}
@@ -74,7 +74,7 @@ public :
 				dequeue();
 				break;
 			case 3:
-				cout<<isfull()<<endl;
+				isfull() ? cout<<"Queue is Full."<<endl : cout<<"Queue is not full."<<endl;
 				break;
 			case 4:
 				cout<<isempty()<<endl;
